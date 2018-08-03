@@ -156,6 +156,7 @@ private extension PasswordInputView {
         //configure button
         NSLayoutConstraint.addEqualConstraintsFromSubView(button, toSuperView: self)
         button.isExclusiveTouch = true
+        button.showsTouchWhenHighlighted = false
         button.addTarget(self, action: #selector(PasswordInputView.touchDown), for: [.touchDown])
         button.addTarget(self, action: #selector(PasswordInputView.touchUp), for: [.touchUpInside, .touchDragOutside, .touchCancel, .touchDragExit])
     }
